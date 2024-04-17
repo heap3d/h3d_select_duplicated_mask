@@ -116,7 +116,7 @@ def are_mask_equal(mask1, mask2):
 
 
 print('')
-print('start select_duplicated_mask_03.py ...')
+print('start select_duplicated_mask.py ...')
 
 try:
 

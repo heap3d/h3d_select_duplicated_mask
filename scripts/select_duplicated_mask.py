@@ -21,7 +21,7 @@ PTAG_MATERIAL = 'Material'
 
 
 def get_masks():
-    return modo.Scene().items(itype=modo.c.MASK_TYPE)
+    return scene.items(itype=modo.c.MASK_TYPE)
 
 
 class MaskInfo:
@@ -91,7 +91,8 @@ def main():
 
 
 if __name__ == '__main__':
-    h3dd = H3dDebug(enable=False, file=h3du.replace_file_ext(modo.Scene().filename, ".log"))
+    scene = modo.Scene()
+    h3dd = H3dDebug(enable=False, file=h3du.replace_file_ext(scene.filename, ".log"))
     try:
         main()
     except H3dExitException as e:
